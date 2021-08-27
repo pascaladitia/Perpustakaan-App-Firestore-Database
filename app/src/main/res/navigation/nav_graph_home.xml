@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.examplel.perpustakaanapp.ui.home.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment3_to_loginActivity"
+            app:destination="@id/loginActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/perpustakaanFragment"
+        android:name="com.examplel.perpustakaanapp.ui.home.fragment.PerpustakaanFragment"
+        android:label="fragment_perpustakaan"
+        tools:layout="@layout/fragment_perpustakaan" >
+        <action
+            android:id="@+id/action_perpustakaanFragment_to_inputActivity"
+            app:destination="@id/inputActivity" />
+        <action
+            android:id="@+id/action_perpustakaanFragment_to_detailActivity"
+            app:destination="@id/detailActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.examplel.perpustakaanapp.ui.home.fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <activity
+        android:id="@+id/inputActivity"
+        android:name="com.examplel.perpustakaanapp.ui.home.InputActivity"
+        android:label="activity_input"
+        tools:layout="@layout/activity_input" />
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.examplel.perpustakaanapp.ui.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/bukuFragment"
+        android:name="com.examplel.perpustakaanapp.ui.home.fragment.BukuFragment"
+        android:label="fragment_buku"
+        tools:layout="@layout/fragment_buku" >
+        <action
+            android:id="@+id/action_bukuFragment_to_inputBukuActivity"
+            app:destination="@id/inputBukuActivity" />
+        <action
+            android:id="@+id/action_bukuFragment_to_detailBukuActivity"
+            app:destination="@id/detailBukuActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/inputBukuActivity"
+        android:name="com.examplel.perpustakaanapp.ui.home.InputBukuActivity"
+        android:label="activity_input_buku"
+        tools:layout="@layout/activity_input_buku" />
+    <activity
+        android:id="@+id/detailBukuActivity"
+        android:name="com.examplel.perpustakaanapp.ui.home.DetailBukuActivity"
+        android:label="activity_detail_buku"
+        tools:layout="@layout/activity_detail_buku" />
+    <activity
+        android:id="@+id/detailActivity"
+        android:name="com.examplel.perpustakaanapp.ui.home.DetailActivity"
+        android:label="activity_detail"
+        tools:layout="@layout/activity_detail" />
+</navigation>
